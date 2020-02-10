@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiller test | Dashboard</title>
+  <!-- Font Awesome -->
+  <!-- Google Font: Source Sans Pro -->
+<!--   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> -->
+  <!-- test -->
+<link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/themes/light/main.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/tiller.css">
+<!-- <link href="css/search-filter.css" rel="stylesheet"> -->
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- -->
+    <script src="https://js.arcgis.com/4.9/"></script>
+<!--     <script src="js/include.js"></script> -->
+    <script src="js/map.js"></script>
+    <!-- <script src="js/tiller.js"></script> -->
+<script>
+ // $(document).on('click', '.btn-danger', (e) => {
+
+  //let target = e.target;
+  //let topmostParent = target.parentElement.parentElement;
+  //let id = $(topmostParent).find('.cat-id').text();
+  //console.log(id);
+//});
+</script>
+
+</head>
+<body class="container-fluid">
+
+<div class="container-fluid">
+        <div class="header">
+          <div class="row align-items-center">
+                <div style="width:33%;text-align:left;display:inline-block;">
+                  <div style="display:inline-block">
+                    <img src="BD_Logo.png" alt="BD_Logo" Style="width:70px;height:70px">
+                  </div>
+                </div>
+                <div style="width:33%;vertical-align:top;text-align:center;display:inline-block">
+
+                  <h2>Bangladesh Map</h2>
+
+                </div>
+                <div style="width:33%;text-align:right;display:inline-block">
+                  <div style="display:inline-block">
+                    <img src="BD_Logo.png" alt="DPHE_Logo" Style="width:70px;height:70px">
+                  </div>
+                </div>          
+        </div>
+  </div>
+  </div>
+
+<div class="left_content float-sm-left">
+  <div class="row">
+      <div class="col-sm-12">
+    
+  <!-- nav division -->
+  <nav class="float-sm-left" >
+    <ul class="menu">
+       
+       <select id="divisiondropdown" name="Division" class="Dropdown">
+          <option value="ALL" selected>All division</option>
+        </select>
+
+    </ul>
+  </nav>
+  <!-- nav district-->
+  <nav class="float-sm-left" >
+    <ul class="menu">      
+       <select id="districtdropdown" name="District" class="Dropdown">
+          <option value="ALL" selected>All district</option>
+        </select>
+    </ul>
+  </nav>  
+  <nav class="float-sm-left" >
+    <ul class="menu">      
+       <select id="headdropdown" name="Head" class="Dropdown">
+          <option value="ALL" selected>All ward</option>
+        </select>
+    </ul>
+  </nav>   
+  <nav class="float-sm-left" >
+    <ul class="menu">      
+       <select id="householddropdown" name="House_hold" class="Dropdown">
+          <option value="ALL" selected>Household Data</option>
+        </select>
+    </ul>
+  </nav>   
+
+<!--Accordion wrapper-->
+<div id="collapse0" class="collapse show" role="tabpanel" aria-labelledby="heading0"
+      data-parent="#accordionEx78">
+      <div class="card-body">
+<!-- test -->
+<!--Accordion wrapper-->
+<div class="accordion md-accordion accordion-blocks float-sm-left" id="accordionEx78" role="tablist"
+  aria-multiselectable="true">
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="heading1">
+
+      <!-- Heading -->
+      <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapse1" aria-expanded="true"
+        aria-controls="collapse1">
+        <h5 class="mt-1 mb-0">
+          <span>Drinking Water Source</span>
+          <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+
+    </div>
+
+    <!-- Card body -->
+    <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1"
+      data-parent="#accordionEx78">
+      <div class="card-body card" >
+
+        <form  id="drop">
+           <input type="checkbox" name="show_all" id="show_all" >select all/unselect all<br><hr>
+        </form>
+
+        <!-- Table responsive wrapper -->
+       <!--  <div class="table-responsive mx-3"> -->
+          <!--Table-->
+         <!--  <table class="table table-hover mb-0"> -->
+          <!-- <table id="drop"> -->
+            <!-- <tr >
+               <input id="hdata" type="checkbox" name="hdata" value="true">
+                <label></label>
+
+            </tr>
+             --><!-- <input type="checkbox" name="input" value="input"><br>
+             -->
+          <!-- </table> -->
+            <!--Table body-->
+            <!-- <tbody>
+              <tr id="drop">
+                <td>
+                  <input type="checkbox">
+                </td>
+              </tr>
+              <tr>
+                <td id="drop">
+                  <input id="drop" type="checkbox">
+                </td>
+              </tr>
+              <tr>
+                <td id="drop">
+                  <input id="drop" type="checkbox">
+                </td>
+              </tr>
+              
+            </tbody> -->
+            <!--Table body-->
+      <!--     </table> -->
+          <!--Table-->
+       <!--  </div> -->
+        <!-- Table responsive wrapper -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Accordion card -->
+</div>
+<!--/.Accordion wrapper-->
+    <!-- Card body -->
+<!--     <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1"
+      data-parent="#accordionEx78">
+      <div class="card-body">
+
+        <form action="/action_page.php">
+          <input type="checkbox" name="coffee" value="cream">With cream<br>
+          <input type="checkbox" name="coffee" value="sugar">With sugar<br>
+          <br>
+          <br><br>
+          <input type="text" id="order" size="50">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div> -->
+
+  </div>
+
+  <!-- Accordion card -->
+</div>
+<!--/.Accordion wrapper-->
+
+
+</div>
+</div>
+</div>
+
+
+  <div id="viewDiv" class="float-sm-right content">   
+    </div>
+
+</body>
+
+
+</html>
